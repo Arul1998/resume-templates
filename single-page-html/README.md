@@ -2,6 +2,8 @@
 
 Print-friendly, responsive CV: gradient header, sectioned skills and experience, and **Print / Save as PDF** in the browser. No build step—open `index.html` locally or host this folder as a static site.
 
+**Template author:** [Arul Cornelious](https://arulcornelious.com) — [GitHub](https://github.com/Arul1998) · [LinkedIn](https://www.linkedin.com/in/arul-cornelious) · [Portfolio](https://arulcornelious.com)
+
 ## Quick start
 
 1. Open **`index.html`** in this folder and replace every `{{TOKEN}}` with your content (search for `{{` in your editor).
@@ -29,15 +31,17 @@ Print-friendly, responsive CV: gradient header, sectioned skills and experience,
 - **Fewer sections:** Remove whole `.section` blocks you do not need.
 - **Colors:** In `<style>`, replace `#667eea` and `#764ba2` with your palette.
 
-## Push this repo to GitHub
+## Push to GitHub
 
-Create a repository named **`resume-templates`**, then from the **repository root** (parent of this folder):
+Create a repository named **`resume-templates`** on your GitHub account, then from the **repository root**:
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/resume-templates.git
+git remote add origin https://github.com/Arul1998/resume-templates.git
 git branch -M main
 git push -u origin main
 ```
+
+If your GitHub username is different, replace `Arul1998` in the URL.
 
 ## Hosting
 
