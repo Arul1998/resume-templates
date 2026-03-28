@@ -33,6 +33,22 @@ If you publish the whole repo from your account, the single-page template can be
 
 If you add templates in your own fork, keep each format in its **own directory** with a `README.md` and self-contained assets. Pull requests are welcome if you’d like to share a new layout.
 
+## Publish to GitHub (maintainer)
+
+This folder is a Git repo on branch `main`. To create **`resume-templates`** on GitHub and push in one step (after a one-time login):
+
+```powershell
+cd C:\Users\kutty\resume-templates
+gh auth login
+gh repo create resume-templates --public --source=. --remote=origin --push
+```
+
+If you already created an **empty** repository named `resume-templates` under [github.com/Arul1998](https://github.com/Arul1998), use:
+
+```powershell
+git push -u origin main
+```
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).
