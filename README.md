@@ -36,8 +36,8 @@ GitHub **does not allow** `<iframe>` (or most raw HTML) in README files; those t
 | **Vector wireframe** | Yes — optional SVG ([`preview.svg`](./single-page-html/preview.svg)). |
 | **iframe** | **No** — stripped for security. |
 
-**Live preview (single-page HTML)** — after [GitHub Pages](#github-pages) is enabled:  
-[Open the template in your browser](https://Arul1998.github.io/resume-templates/single-page-html/) (replace `Arul1998` with your username if you forked the repo).
+**Live preview (single-page HTML)** — works once [GitHub Pages](#github-pages) is configured and deployed:  
+[Open the template in your browser](https://Arul1998.github.io/resume-templates/single-page-html/) (replace `Arul1998` with your username if you forked the repo). If the link 404s or looks wrong, follow the steps below — this repo includes a [`.nojekyll`](./.nojekyll) file so placeholder syntax like `{{FULL_NAME}}` is not broken by Jekyll.
 
 Stylized layout reference (sample wireframe — not your real data; [open `preview.png` locally](./single-page-html/preview.png) if the image does not load):
 
@@ -51,11 +51,30 @@ Stylized layout reference (sample wireframe — not your real data; [open `previ
 
 ## GitHub Pages
 
-If you publish the whole repo from your account, the single-page template can be opened at:
+### Enable Pages (once per repository)
+
+1. Open the repo on GitHub → **Settings** → **Pages** (under “Code and automation”).
+2. Under **Build and deployment** → **Source**, choose **Deploy from a branch**.
+3. **Branch:** `main`, folder **`/ (root)`** → **Save**.
+4. Wait 1–3 minutes. The site URL appears at the top of the Pages settings (and in green on the **Actions** tab when the deploy finishes).
+
+### Live URL
+
+With the default setup, the single-page template is at:
 
 `https://Arul1998.github.io/resume-templates/single-page-html/`
 
-(Use your own GitHub username in the URL if you fork or mirror the repo.)
+Use your own GitHub username in place of `Arul1998` if you forked the repo.
+
+### Why the live preview can fail (and how this repo fixes it)
+
+| Issue | What to do |
+|--------|------------|
+| **404 Not Found** | Pages is not enabled yet, or the deploy is still running. Confirm the URL in **Settings → Pages** and wait a few minutes after saving. |
+| **Blank page or build error** | GitHub Pages runs **Jekyll** by default. Jekyll treats `{{ ... }}` in HTML as **Liquid** templates, which breaks `index.html`’s resume placeholders. This repository includes an empty **`.nojekyll`** file at the [repo root](./.nojekyll) so files are served as plain static HTML. Commit and push `.nojekyll`, then redeploy (push any commit or re-run Pages). |
+| **Wrong account** | Project Pages URLs are always `https://<owner>.github.io/<repo>/...`. Forks use *your* username, not the original author’s. |
+
+After pushing changes, open the live link in an **incognito/private** window or hard-refresh (**Ctrl+F5**) to avoid a cached 404.
 
 ## Adding a new resume template (for contributors)
 
