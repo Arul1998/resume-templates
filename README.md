@@ -2,10 +2,19 @@
 
 A growing collection of **resume and CV templates** in different structures and styles. Pick a folder, customize the content, and export to PDF or host as a static page.
 
+**Repository:** [github.com/Arul1998/resume-templates](https://github.com/Arul1998/resume-templates)
+
 **Author:** [Arul Cornelious](https://arulcornelious.com)  
 **Profiles:** [GitHub](https://github.com/Arul1998) · [LinkedIn](https://www.linkedin.com/in/arul-cornelious) · [Portfolio](https://arulcornelious.com) · [Email](mailto:arulcornelious@gmail.com)
 
-This project is maintained by me for anyone who wants a clean, print-ready resume format. New layouts will be added here over time as separate folders.
+---
+
+### If you find this useful
+
+- **Star the repo** on GitHub — it helps others discover these templates and shows support for the project. Click **Star** at the top of [the repository page](https://github.com/Arul1998/resume-templates).
+- **Buy me a coffee** — [Buy Me a Coffee](https://www.buymeacoffee.com/arulcornelious) if you would like to say thanks.
+
+---
 
 ## Templates
 
@@ -13,12 +22,31 @@ This project is maintained by me for anyone who wants a clean, print-ready resum
 |--------|--------|--------|
 | [`single-page-html`](./single-page-html/) | HTML (single file) | Gradient header, skills grid, experience, print-friendly A4. No build step. |
 
-More layouts (e.g. two-column HTML, minimal, alternate typography) will be added as **new top-level folders** next to `single-page-html`.
+New layouts are added as **separate top-level folders** next to `single-page-html` (for example: two-column HTML, minimal, LaTeX export, another visual style).
+
+### Preview (why not an iframe?)
+
+GitHub **does not allow** `<iframe>` (or most raw HTML) in README files; those tags are removed when the page is rendered. To show how a template looks, use one or more of these instead:
+
+| Approach | Works on GitHub? |
+|------------|------------------|
+| **Live link** | Yes — open the hosted page in a new tab. |
+| **Screenshot** | Yes — commit a PNG/WebP and embed with `![alt](./path/to/image.png)`. |
+| **PNG screenshot** | Yes — best compatibility; commit a `preview.png` and embed it. |
+| **Vector wireframe** | Yes — optional SVG ([`preview.svg`](./single-page-html/preview.svg)). |
+| **iframe** | **No** — stripped for security. |
+
+**Live preview (single-page HTML)** — after [GitHub Pages](#github-pages) is enabled:  
+[Open the template in your browser](https://Arul1998.github.io/resume-templates/single-page-html/) (replace `Arul1998` with your username if you forked the repo).
+
+Stylized layout reference (sample wireframe — not your real data; [open `preview.png` locally](./single-page-html/preview.png) if the image does not load):
+
+[![Stylized preview of the single-page HTML resume — click to open the live GitHub Pages version](./single-page-html/preview.png)](https://Arul1998.github.io/resume-templates/single-page-html/)
 
 ## Using this repository
 
 1. Clone or download the repo.
-2. Open the README inside the template folder you want (e.g. `single-page-html/README.md`).
+2. Open the README inside the template folder you want (e.g. [`single-page-html/README.md`](./single-page-html/README.md)).
 3. Follow that template’s instructions for placeholders and PDF export.
 
 ## GitHub Pages
@@ -29,9 +57,50 @@ If you publish the whole repo from your account, the single-page template can be
 
 (Use your own GitHub username in the URL if you fork or mirror the repo.)
 
-## Contributing
+## Adding a new resume template (for contributors)
 
-If you add templates in your own fork, keep each format in its **own directory** with a `README.md` and self-contained assets. Pull requests are welcome if you’d like to share a new layout.
+Contributions are welcome. Follow this structure so maintainers can review your work and users can find your template easily.
+
+### 1. Fork and branch
+
+- Fork [this repository](https://github.com/Arul1998/resume-templates).
+- Create a branch from `main` with a clear name, e.g. `add-minimal-html-template`.
+
+### 2. Add a new top-level folder
+
+- Use a **short, descriptive folder name** in `kebab-case` (e.g. `minimal-html`, `two-column-latex`, `print-a4-markdown`).
+- **Do not** nest your template inside `single-page-html` — each template is its **own** directory at the repo root.
+
+### 3. What to include in that folder
+
+| Item | Purpose |
+|------|--------|
+| **`README.md`** | How to fill in content, export to PDF or print, any dependencies, and browser or tool requirements. |
+| **Template files** | Source files users edit (HTML, CSS, Markdown, etc.). Prefer **no mandatory build step** unless you document it clearly. |
+| **Assets** | Images, fonts, or CSS kept **inside the same folder** (or documented paths) so the template is self-contained or easy to clone. |
+| **License** | Your contribution should be compatible with this repo’s [MIT License](./LICENSE). |
+
+### 4. Document placeholders and customization
+
+- Explain every placeholder or variable users must replace (see [`single-page-html`](./single-page-html/) for an example).
+- Mention print settings (e.g. A4, margins) if relevant.
+
+### 5. Register the template in the root README
+
+- Add a **new row** to the **Templates** table in this file with the folder name, format, and a one-line description.
+
+### 6. Open a pull request
+
+- Describe what your template offers and how it differs from existing ones.
+- Optional: add a screenshot in the PR description so people can preview the layout.
+
+Pull requests that match the above are much easier to merge. If you are unsure, open an issue first to discuss the idea.
+
+## Contributing (short version)
+
+- One template = **one root-level folder** + **README** + **self-contained assets**.
+- Update the **Templates** table in this README when you add something new.
+- Keep the project approachable: clear docs, minimal friction for people who only want to download and edit.
 
 ## Publish to GitHub (maintainer)
 

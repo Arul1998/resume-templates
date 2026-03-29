@@ -4,6 +4,12 @@ Print-friendly, responsive CV: gradient header, sectioned skills and experience,
 
 **Template author:** [Arul Cornelious](https://arulcornelious.com) — [GitHub](https://github.com/Arul1998) · [LinkedIn](https://www.linkedin.com/in/arul-cornelious) · [Portfolio](https://arulcornelious.com)
 
+## Preview
+
+Sample wireframe of this layout (gradient header, sections, skills blocks). Open **`preview.png`** in this folder if your Markdown viewer does not show images.
+
+![Preview of the single-page HTML resume layout](./preview.png)
+
 ## Quick start
 
 1. Open **`index.html`** in this folder and replace every `{{TOKEN}}` with your content (search for `{{` in your editor).
